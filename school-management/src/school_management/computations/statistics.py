@@ -16,8 +16,10 @@ def compute_student_topic_grades_mean(
         if grade.topic_id == topic_id and grade.student_id == student_id:
             sum_grades += grade.grade
             number_grades += 1
-
-    return sum_grades / number_grades
+    try:
+        return sum_grades / number_grades
+    except ZeroDivisionError:
+        return None
 
 
 def compute_group_grades(group: Group) -> dict:
@@ -47,5 +49,5 @@ def compute_group_grades(group: Group) -> dict:
         student_grades["success"] = student_grades["global"] >= SUCCESS_THRESHOLD
 
         results[student.id] = student_grades
-
+    
     return results
