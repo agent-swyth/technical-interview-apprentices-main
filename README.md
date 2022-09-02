@@ -13,7 +13,7 @@ The aim of the first part in this technical test is to implement sound unit-test
 
 **Your mission** is to help the school have a reliable library to compute student's grade at the end of semesters and automate *passes to next year* decisions. To do that, you are in charge of unit testing. 
 
-A student passes a semester if its global mark exceeds a threshold (10). The global mark is computed as the weighted mean of the student's grades in all topics (classes). For instance, if the topic weights for a group `A` are (mathematics : 10, physics: 8, geography: 2) and if student `Alice` of group `A` obtains 13 in mathematics, 12 in physics and 18 in geometry, its global mark is obtained by: $ \frac{13*10 + 12*8 + 18*2}{1*10 + 1*8 + 1*2}$.  
+A student passes a semester if its global mark exceeds a threshold (10). The global mark is computed as the weighted mean of the student's grades in all topics (classes). For instance, if the topic weights for a group `A` are (mathematics : 10, physics: 8, geography: 2) and if student `Alice` of group `A` obtains 13 in mathematics, 12 in physics and 18 in geometry, its global mark is obtained by: (13 x 10 + 12 x 8 + 18 x 2) / (1 x 10 + 1 x 8 + 1 x 2).  
 
 **set-up and structure**
 You can find the python project in `school-management` folder . We use `poetry` to initialize it. `poetry` is a tool for dependency management and packaging for `Python projects. **Your first task** is to install poetry on your computer and install the project's dependencies. For that, you need to follow the instructions in the documentation: https://python-poetry.org/docs/
