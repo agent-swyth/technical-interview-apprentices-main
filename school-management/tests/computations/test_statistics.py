@@ -15,7 +15,7 @@ def test_compute_student_topic_grades_mean(group_all_passing: Group):
 # Compute group grades 
 def test_compute_group_grades(group_all_passing: Group):
     result = compute_group_grades(group_all_passing)
-             
+    
     for student_id, semester_results in result.items():
         print(student_id, semester_results)
         if not semester_results["success"]:

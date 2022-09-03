@@ -25,3 +25,10 @@ class Group(BaseModel):
     topics : list[Topic]
     topic_weights : dict[str, float]
     grades: list[Grade]
+    
+class Results(BaseModel):
+    Mathematics: float
+    Physics: float
+    Geography: float
+    global_grade: float
+    success: bool

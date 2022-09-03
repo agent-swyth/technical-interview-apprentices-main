@@ -1,4 +1,4 @@
-from school_management.models.school import Grade, Group
+from school_management.models.school import Grade, Group, Results
 
 SUCCESS_THRESHOLD = 10
 
@@ -44,10 +44,12 @@ def compute_group_grades(group: Group) -> dict:
             global_grade += topic_mean * group.topic_weights[topic]
             number_grades += 1 * group.topic_weights[topic]
 
-        student_grades["global"] = global_grade / number_grades
+        # "global_grade" instead of global because it is a python keyword
+        student_grades["global_grade"] = global_grade / number_grades
 
-        student_grades["success"] = student_grades["global"] >= SUCCESS_THRESHOLD
+        student_grades["success"] = student_grades["global_grade"] >= SUCCESS_THRESHOLD
 
         results[student.id] = student_grades
-    
+        
+    print(results)
     return results
