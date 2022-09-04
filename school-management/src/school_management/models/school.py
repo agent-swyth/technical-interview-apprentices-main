@@ -1,5 +1,5 @@
 from enum import Enum
-
+# from typing import Union
 from pydantic import BaseModel
 
 
@@ -25,10 +25,7 @@ class Group(BaseModel):
     topics : list[Topic]
     topic_weights : dict[str, float]
     grades: list[Grade]
-    
+
 class Results(BaseModel):
-    Mathematics: float
-    Physics: float
-    Geography: float
-    global_grade: float
-    success: bool
+    student_id: int
+    results: dict[str, float] | dict[str, bool]
