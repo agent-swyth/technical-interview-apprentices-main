@@ -24,7 +24,7 @@ def compute_student_topic_grades_mean(
 
 def compute_group_grades(group: Group) -> dict:
 
-    results = {}
+    results: Results = {}
     
     for student in group.students:
         
@@ -51,5 +51,4 @@ def compute_group_grades(group: Group) -> dict:
 
         results[student.id] = student_grades
         
-    print(results)
     return results

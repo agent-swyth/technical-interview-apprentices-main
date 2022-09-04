@@ -17,6 +17,6 @@ def test_compute_group_grades(group_all_passing: Group):
     result = compute_group_grades(group_all_passing)
     
     for student_id, semester_results in result.items():
-        print(student_id, semester_results)
+        # print(student_id, semester_results)
         if not semester_results["success"]:
             assert False
